@@ -30,4 +30,12 @@ git config --global user.name 'paul gualambo giraldo'
 git config user.email paul.gualambo@gmail.com
 git config user.name 'paul gualambo giraldo'
 
-# Con el uso de code stream
+#configure initial
+##New
+git clone url_repositorio [name-folder]
+## Already repository
+git remote -v
+git remote remove origin # para eliminar el repositorio
+git remote add origin url_repositorio
+#pull y avoid error
+git pull origin main --allow-unrelated-histories
