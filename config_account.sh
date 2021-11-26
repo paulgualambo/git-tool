@@ -3,15 +3,17 @@
 ssh-keygen -t rsa -b 4096 -C "paul.gualambo@gmail.com"
 #dependiente de la ubicación de la llave privada y publica, se colocará en el directorio 
 #/home/<usuario>/.ssh/id_rsa_paul.gualambo@orbis.com.pe "Linux"
-/c/Users/Paul/.ssh/id_rsa_paul.gualambo@gmail.com
-~/.ssh/id_rsa_paul.gualambo@gmail.com #Linux windows o mac
-#mkdir -p ~/.ssh/paul.gualambo@orbis.com.pe
+#/c/Users/Paul/.ssh/id_rsa_paul.gualambo@gmail.com
+#/home/paul/.ssh/id_rsa_paul.gualambo@gmail.com #Linux windows o mac
+/home/paul/.ssh/id_rsa
+/c/Users/Paul/.ssh/id_rsa
 
 #dependiendo de windows linux o mac
 eval "$(ssh-agent -s)"
-
+ssh-add
 #agregar la llave privada al agente de ssh
-ssh-add ~/.ssh/id_rsa_paul.gualambo@gmail.com
+#ssh-add ~/.ssh/id_rsa_paul.gualambo@gmail.com
+
 
 ssh -T git@bitbucket.org
 ssh -T git@github.com
