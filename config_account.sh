@@ -1,28 +1,18 @@
 #Creación de ssh-key para el usuario
 
-ssh-keygen -t rsa -b 4096 -C "paul.gualambo@gmail.com"
-#dependiente de la ubicación de la llave privada y publica, se colocará en el directorio 
-#/home/<usuario>/.ssh/id_rsa_paul.gualambo@orbis.com.pe "Linux"
-#/c/Users/Paul/.ssh/id_rsa_paul.gualambo@gmail.com
-#/home/paul/.ssh/id_rsa_paul.gualambo@gmail.com #Linux windows o mac
-/home/paul/.ssh/id_rsa
-/c/Users/Paul/.ssh/id_rsa
-
-#dependiendo de windows linux o mac
+ssh-keygen 
 eval "$(ssh-agent -s)"
 ssh-add
 #agregar la llave privada al agente de ssh
 #ssh-add ~/.ssh/id_rsa_paul.gualambo@gmail.com
 
+cat ~/.ssh/id_rsa.pub
 
 ssh -T git@bitbucket.org
 ssh -T git@github.com
 ssh -T git@gitlab.com
 #verificar en el archivo si esta registraso el repositorio
 cat ~/.ssh/config #para futuras integraciones con apps
-
-#Para nombrar en los repositorios
-[personal.[name_device]]|[[name_organizacion]].[name_device]].[name_so].[name_vm].[email_user]
 
 #Global
 git config --global user.email paul.gualambo@gmail.com
